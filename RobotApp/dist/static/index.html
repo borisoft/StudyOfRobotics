@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript" src="fabric.min.js" ></script>
+        <script type="text/javascript" src="mapView.js" ></script>
+        <script type="text/javascript" src="map.js" ></script>
+    </head>
+    <body>
+        <table cellspacing="5" cellpadding="5">
+            <tr>
+                <td>
+                    <img src="http://192.168.0.102:8071?action=stream" frameborder="0" width="640" height="480" />
+                </td>
+                <td>
+                    <canvas height='600' width='600' id='c'>Обновите браузер</canvas>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <table cellspacing="5" cellpadding="5">
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td align="center">
+                                <button id="forward" onclick="execCmd('forward')">FORWARD</button>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td align="center">
+                                <button id="left" onclick="execCmd('left')">LEFT</button>
+                            </td>
+                            <td align="center">
+                                <input type="text" name="distance" id="distance" value="0" style="width:20px" />
+                                <input type="text" name="angle" id="angle" value="10" style="width:20px" />
+                            </td>
+                            <td align="center">
+                                <button id="right" onclick="execCmd('right')">RIGHT</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td align="center">
+                                <button id="back" onclick="execCmd('back')">BACK</button>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td align="center">
+                                <button id="turn_left" onclick="execCmd('turn_left')">LEFT</button>
+                            </td>
+                            <td align="center">
+                                <button id="stop" onclick="execCmd('stop')">STOP!</button>
+                            </td>
+                            <td align="center">
+                                <button id="turn_right" onclick="execCmd('turn_right')">RIGHT</button>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <script type="text/javascript" src="script.js" ></script>
+    </body>
+</html>
